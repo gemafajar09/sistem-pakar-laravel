@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\minatM;
 
 class HomeController extends Controller
 {
@@ -28,6 +30,12 @@ class HomeController extends Controller
 
     public function project()
     {
-        return view('halaman.project');
+        $data = DB::table('minat')->get();
+        return view('halaman.project',compact('data'));
+    }
+
+    public function simpan(Request $r)
+    {
+        
     }
 }

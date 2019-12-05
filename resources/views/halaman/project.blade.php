@@ -7,9 +7,10 @@ Project
 @section('content')
 <section class="content py-3">
   <div class="container-fluid">
-  	<div class="row">
-  		<div class="col-md-3"></div>
-  		<div class="col-md-5">
+  	<form action="" method="POST">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-5">
 	  		<div class="card">
 	  			<div class="card-header" style="background-color: grey;">
 	  				Input Nama Lengkap
@@ -25,12 +26,21 @@ Project
 	  				</div>
 	  			</div>
 	  		</div>
-  		</div>
-  		<div class="col-md-12">
-  			<div class="card">
-  				<div class="card-body">
-  					<table class="table">
-  						<thead>
+			</div>
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-body">
+						<table class="table" ui-jq="footable" ui-options='{
+								"paging": {
+					          	"enabled": true
+					        },
+					        	"filtering": {
+					          	"enabled": true
+					        },
+					        	"sorting": {
+					          	"enabled": true
+					        }}'>
+							<thead>
 	  						<tr>
 	  							<td>Kode Minat</td>
 	  							<td>Minat/Bakat</td>
@@ -38,20 +48,23 @@ Project
 	  						</tr>
 	  					</thead>
 	  					<tbody>
+	  						@foreach($data as $a)
 	  						<tr>
-	  							<td></td>
-	  							<td></td>
+	  							<td>{{$a->id_minat}}</td>
+	  							<td>{{$a->minat}}</td>
 	  							<td>
-	  								<input type="radio" value="" name="">
-	  								<input type="radio" value="" name="">
+	  								<input type="radio" value="{{$a->cf}}" name="cf[]">Ya
+	  								<input type="radio" value="0" name="cf[]" >Tidak
 	  							</td>
 	  						</tr>
+	  						@endforeach
 	  					</tbody>
-  					</table>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
   </div>
 </section>
 @endsection
