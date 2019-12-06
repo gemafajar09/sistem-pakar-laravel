@@ -33,7 +33,7 @@ body {
 }
 </style>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body id="content" class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -114,7 +114,7 @@ body {
             <a href="{{ url('/project')}}" class="nav-link">
               <p>
                 <i class="nav-icon fas fa-copy"></i>
-                Penentuan Minat
+                Konsultasi
               </p>
             </a>
           </li>
