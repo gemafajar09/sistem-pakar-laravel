@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/project', 'HomeController@project');
+Route::post('/konsultasi', 'HomeController@simpan');

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V20</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
@@ -36,7 +36,7 @@
                 <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
                     @csrf
                     <span class="login100-form-title p-b-43">
-                        Sistem Penentuan Minat & Bakat 
+                        Sistem Diagnosa Penyakit 
                     </span>
                     
                     <div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">
